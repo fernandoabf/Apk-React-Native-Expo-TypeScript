@@ -2,20 +2,20 @@ import {StyleSheet} from 'react-native'
 import { theme } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
-    container:{
+    container: {
         flexDirection: 'row',
         alignItems: 'center'
     },
-    user:{
+    user: {
         flexDirection: 'row'
     },
-    greeting:{
+    greeting: {
         fontFamily: theme.fonts.title500,
         fontSize: 24,
         color: theme.colors.heading,
         marginRight: 6
     },
-    username:{
+    username: {
         fontFamily: theme.fonts.title700,
         fontSize: 24,
         color: theme.colors.heading

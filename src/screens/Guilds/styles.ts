@@ -2,10 +2,13 @@ import {StyleSheet} from 'react-native'
 import { theme } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
-    image:{
-        width: 62,
-        height: 66,
-        borderRadius: 8,
-       
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        paddingTop: 24
+    },
+    guilds: {
+        width: '100%',
     }
+
 });

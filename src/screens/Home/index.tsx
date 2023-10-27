@@ -41,7 +41,8 @@ export function Home(){
             category: '3',
             date: '26/10 ás 20:40h',
             description: 'Hoje ganharemos ao menos uma'
-        }
+        },
+        
     ]
 
     function handleCategorySelect(categoryId: string) {
@@ -71,30 +72,28 @@ export function Home(){
                     setCategory= {handleCategorySelect}
                     />
                 </View>
+                
+                <ListHeader 
+                title='Partidas Agendadas'
+                subtitle='Total 6'
+                />
 
-                <View style ={styles.content}>
-                    <ListHeader 
-                    title='Partidas Agendadas'
-                    subtitle='Total 6'
-                    />
-
-                    <FlatList 
-                    data={appoitments}
-                    keyExtractor={item => item.id}
-                    renderItem={({ item }) => (
-                        <Appointment 
-                        data = {item} 
-                        onPress={handleAppointmentDetails}
-                        />
-                    )}
-                    ItemSeparatorComponent={ListDivider}
-                    style = {styles.matches}
-                    showsVerticalScrollIndicator = {false}
-                    
-                    />
-                    
-                </View>
             </View>
+            <FlatList 
+            data={appoitments}
+            keyExtractor={item => item.id}
+            renderItem={({ item }) => (
+                <Appointment 
+                data = {item} 
+                onPress={handleAppointmentDetails}
+                />
+            )}
+            ItemSeparatorComponent={ListDivider}
+            contentContainerStyle={{paddingBottom: 69}}
+            style = {styles.matches}
+            showsVerticalScrollIndicator = {false}
+            
+            />
         </BackGround>
     );
 
