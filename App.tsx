@@ -7,6 +7,7 @@ import Apploading from 'expo-app-loading'
 
 import { Routes } from './src/routes';
 import { BackGround } from './src/components/BackGround';
+import { AuthProvider } from './src/hooks/auth';
 
 export default function App(){
   
@@ -21,13 +22,15 @@ export default function App(){
   }
 
   return (
-    <BackGround>
+    <BackGround>  
       <StatusBar 
         barStyle={'light-content'} 
         backgroundColor={'transparent'} 
         translucent
       />
-      <Routes />
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
     </BackGround>
   );
 }
